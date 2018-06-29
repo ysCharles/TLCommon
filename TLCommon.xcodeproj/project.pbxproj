@@ -18,6 +18,7 @@
 		9E26E07920E4D831006B7693 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07820E4D831006B7693 /* UIColorExtension.swift */; };
 		9E26E07B20E4D879006B7693 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07A20E4D879006B7693 /* UIViewExtension.swift */; };
 		9E26E07D20E4D8E0006B7693 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */; };
+		9E26E08020E4DBF6006B7693 /* TableEmptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9E26E07820E4D831006B7693 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9E26E07A20E4D879006B7693 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableEmptyable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		9E26E06120E4C918006B7693 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9E26E07E20E4DBE0006B7693 /* Protocol */,
 				9E26E07320E4D521006B7693 /* Extension */,
 				9E26E06C20E4CDC9006B7693 /* Utils */,
 				9E26E06920E4CD20006B7693 /* Constant */,
@@ -112,6 +115,14 @@
 				9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9E26E07E20E4DBE0006B7693 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				9E26E07920E4D831006B7693 /* UIColorExtension.swift in Sources */,
 				9E26E06B20E4CD31006B7693 /* Constant.swift in Sources */,
 				9E26E07120E4CE11006B7693 /* SandBoxUtils.swift in Sources */,
+				9E26E08020E4DBF6006B7693 /* TableEmptyable.swift in Sources */,
 				9E26E07220E4CE11006B7693 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
