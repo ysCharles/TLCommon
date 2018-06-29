@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0B2FBC20E5D78300F67E7D /* TLTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B2FBB20E5D78300F67E7D /* TLTextView.swift */; };
 		9E26E06720E4CC32006B7693 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E06520E4CC32006B7693 /* BaseNavigationController.swift */; };
 		9E26E06820E4CC32006B7693 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E06620E4CC32006B7693 /* BaseViewController.swift */; };
 		9E26E06B20E4CD31006B7693 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E06A20E4CD31006B7693 /* Constant.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0B2FBB20E5D78300F67E7D /* TLTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTextView.swift; sourceTree = "<group>"; };
 		9E26E05620E4C8F5006B7693 /* TLCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E26E06220E4C92A006B7693 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E26E06520E4CC32006B7693 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0B2FBA20E5D77500F67E7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E0B2FBB20E5D78300F67E7D /* TLTextView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9E26E04C20E4C8F5006B7693 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		9E26E06120E4C918006B7693 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9E0B2FBA20E5D77500F67E7D /* View */,
 				9E26E07E20E4DBE0006B7693 /* Protocol */,
 				9E26E07320E4D521006B7693 /* Extension */,
 				9E26E06C20E4CDC9006B7693 /* Utils */,
@@ -209,6 +220,7 @@
 				9E26E06820E4CC32006B7693 /* BaseViewController.swift in Sources */,
 				9E26E07D20E4D8E0006B7693 /* UIImageExtension.swift in Sources */,
 				9E26E07520E4D552006B7693 /* IDValidation.swift in Sources */,
+				9E0B2FBC20E5D78300F67E7D /* TLTextView.swift in Sources */,
 				9E26E07720E4D6D5006B7693 /* StringExtension.swift in Sources */,
 				9E26E07920E4D831006B7693 /* UIColorExtension.swift in Sources */,
 				9E26E06B20E4CD31006B7693 /* Constant.swift in Sources */,
