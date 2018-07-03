@@ -27,7 +27,7 @@ open class BaseViewController: UIViewController {
         return .lightContent
     }
     
-    open func popBack() {
+    @objc open func popBack() {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
         }
