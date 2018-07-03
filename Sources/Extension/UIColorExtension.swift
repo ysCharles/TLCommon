@@ -81,3 +81,111 @@ extension UIColor {
         return color(hexString: hexString, alpha: 1.0)
     }
 }
+
+enum UIGradientStyle {
+    case left2Right
+    case radial //雷达
+    case top2Bottom
+    case diagonal //斜线
+}
+
+extension UIColor {
+    static func gradient(style: UIGradientStyle = .left2Right, frame: CGRect, colors: [UIColor]) -> UIColor? {
+        let backgroundGradientLayer = CAGradientLayer()
+        backgroundGradientLayer.frame = frame
+        
+        var cgColors = [CGColor]()
+        for color in colors {
+            cgColors.append(color.cgColor)
+        }
+        
+        switch style {
+        case .left2Right:
+            backgroundGradientLayer.colors = cgColors
+            backgroundGradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+            backgroundGradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+            
+            //Convert our CALayer to a UIImage object
+            UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.main.scale)
+            guard let context = UIGraphicsGetCurrentContext() else {
+                return nil
+            }
+            backgroundGradientLayer.render(in: context)
+            guard let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext() else {
+                return nil
+            }
+            UIGraphicsEndImageContext()
+            return UIColor(patternImage: backgroundColorImage)
+            
+        case .radial:
+            UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.main.scale)
+            
+            let locations: [CGFloat] = [0, 1]
+            
+            //Default to the RGB Colorspace
+            let myColorspace = CGColorSpaceCreateDeviceRGB()
+            //Create our Gradient
+            guard let myGradient = CGGradient(colorsSpace: myColorspace, colors: cgColors as CFArray, locations: locations) else {
+                return nil
+            }
+            
+            let myCentrePoint = CGPoint(x: 0.5 * frame.size.width, y: 0.5 * frame.size.height)
+            
+            let myRadius = min(frame.size.width, frame.size.height) * 0.5
+            
+            // Draw our Gradient
+            guard let context = UIGraphicsGetCurrentContext() else {
+                return nil
+            }
+            context.drawRadialGradient(myGradient, startCenter: myCentrePoint, startRadius: 0, endCenter: myCentrePoint, endRadius: myRadius, options: CGGradientDrawingOptions.drawsAfterEndLocation)
+            
+            guard let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext() else {
+                return nil
+            }
+            
+            UIGraphicsEndImageContext()
+            
+            return UIColor(patternImage: backgroundColorImage)
+            
+        case .diagonal:
+            //Set out gradient's colors
+            backgroundGradientLayer.colors = cgColors;
+            
+            //Specify the direction our gradient will take
+            backgroundGradientLayer.startPoint = CGPoint(x: 0, y: 1)
+            backgroundGradientLayer.endPoint = CGPoint(x: 1, y: 0)
+            
+            //Convert our CALayer to a UIImage object
+            UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.main.scale)
+            guard let context = UIGraphicsGetCurrentContext() else {
+                return nil
+            }
+            backgroundGradientLayer.render(in: context)
+            guard let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext() else {
+                return nil
+            }
+            UIGraphicsEndImageContext()
+            return UIColor(patternImage: backgroundColorImage)
+            
+        case .top2Bottom:
+            //Set out gradient's colors
+            backgroundGradientLayer.colors = cgColors;
+            
+            //Specify the direction our gradient will take
+            backgroundGradientLayer.startPoint = CGPoint(x: 0, y: 0)
+            backgroundGradientLayer.endPoint = CGPoint(x: 0, y: 1)
+            
+            //Convert our CALayer to a UIImage object
+            UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.main.scale)
+            guard let context = UIGraphicsGetCurrentContext() else {
+                return nil
+            }
+            backgroundGradientLayer.render(in: context)
+            guard let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext() else {
+                return nil
+            }
+            UIGraphicsEndImageContext()
+            return UIColor(patternImage: backgroundColorImage)
+        }
+    }
+}

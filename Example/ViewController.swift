@@ -13,11 +13,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let textView = UITextView(frame: CGRect(x: 0, y: 100, width: 375, height: 100))
+        let textView = TLTextView(frame: CGRect(x: 0, y: 100, width: 375, height: 100))
         
         textView.font = UIFont.systemFont(ofSize: 24)
 //        textView.text = "hello"
-//        textView.placeholder = "爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁"
+        textView.placeholder = "爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁爱谁谁"
+        textView.placeholderPaddingLeft = 8
+        textView.placeholderPaddingTop = 10
         
         
         view.addSubview(textView)

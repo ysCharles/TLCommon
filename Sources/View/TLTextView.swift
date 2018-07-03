@@ -32,6 +32,11 @@ public class TLTextView: UITextView {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    
+    /// left padding
+    public var placeholderPaddingLeft : CGFloat = 0
+    /// top padding
+    public var placeholderPaddingTop : CGFloat = 0
 }
 
 extension TLTextView {
@@ -53,10 +58,15 @@ extension TLTextView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        let metricsDict = ["hPadding": 5.0, "vPadding": 8.0]
-        let viewsDict : [String : AnyObject] = ["holder": placeholderLabel]
-        placeholderLabel.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-hPadding-[holder]-hPadding-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metricsDict, views: viewsDict))
-        placeholderLabel.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-vPadding-[holder]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metricsDict, views: viewsDict))
+        let lineFragementPadding = max(textContainer.lineFragmentPadding, placeholderPaddingLeft)
+        let contenInset = textContainerInset
+        
+        let labelX = lineFragementPadding + contenInset.left
+        let labelY = max(contenInset.top, placeholderPaddingTop)
+        
+        let labelW = bounds.size.width - contenInset.right - labelX - lineFragementPadding
+        let labelH = placeholderLabel.sizeThatFits(CGSize(width: labelW, height: CGFloat(MAXFLOAT))).height
+        placeholderLabel.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
     }
 }
 
