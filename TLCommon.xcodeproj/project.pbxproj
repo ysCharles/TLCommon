@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9E0B2FBC20E5D78300F67E7D /* TLTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B2FBB20E5D78300F67E7D /* TLTextView.swift */; };
+		9E0B2FC420E603F500F67E7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B2FC320E603F500F67E7D /* AppDelegate.swift */; };
+		9E0B2FC620E603F500F67E7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B2FC520E603F500F67E7D /* ViewController.swift */; };
+		9E0B2FC920E603F500F67E7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0B2FC720E603F500F67E7D /* Main.storyboard */; };
+		9E0B2FCB20E603F500F67E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0B2FCA20E603F500F67E7D /* Assets.xcassets */; };
+		9E0B2FCE20E603F500F67E7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0B2FCC20E603F500F67E7D /* LaunchScreen.storyboard */; };
+		9E0B2FD320E6042300F67E7D /* TLCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E26E05620E4C8F5006B7693 /* TLCommon.framework */; };
+		9E0B2FD420E6042300F67E7D /* TLCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E26E05620E4C8F5006B7693 /* TLCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E26E06720E4CC32006B7693 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E06520E4CC32006B7693 /* BaseNavigationController.swift */; };
 		9E26E06820E4CC32006B7693 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E06620E4CC32006B7693 /* BaseViewController.swift */; };
 		9E26E06B20E4CD31006B7693 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E06A20E4CD31006B7693 /* Constant.swift */; };
@@ -20,10 +27,43 @@
 		9E26E07B20E4D879006B7693 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07A20E4D879006B7693 /* UIViewExtension.swift */; };
 		9E26E07D20E4D8E0006B7693 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */; };
 		9E26E08020E4DBF6006B7693 /* TableEmptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */; };
+		9E63B44820EB4A870028F6FE /* UIBarButtonItemFixSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E63B44720EB4A870028F6FE /* UIBarButtonItemFixSpace.swift */; };
+		9E63B44A20EB4AA00028F6FE /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E63B44920EB4AA00028F6FE /* DispatchQueueExtension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E0B2FD520E6042300F67E7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E26E04D20E4C8F5006B7693 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E26E05520E4C8F5006B7693;
+			remoteInfo = TLCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E0B2FD720E6042300F67E7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E0B2FD420E6042300F67E7D /* TLCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9E0B2FBB20E5D78300F67E7D /* TLTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTextView.swift; sourceTree = "<group>"; };
+		9E0B2FC120E603F500F67E7D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0B2FC320E603F500F67E7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E0B2FC520E603F500F67E7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E0B2FC820E603F500F67E7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E0B2FCA20E603F500F67E7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E0B2FCD20E603F500F67E7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E0B2FCF20E603F500F67E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E26E05620E4C8F5006B7693 /* TLCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E26E06220E4C92A006B7693 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E26E06520E4CC32006B7693 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -38,9 +78,19 @@
 		9E26E07A20E4D879006B7693 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableEmptyable.swift; sourceTree = "<group>"; };
+		9E63B44720EB4A870028F6FE /* UIBarButtonItemFixSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemFixSpace.swift; sourceTree = "<group>"; };
+		9E63B44920EB4AA00028F6FE /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9E0B2FBE20E603F500F67E7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0B2FD320E6042300F67E7D /* TLCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9E26E05220E4C8F5006B7693 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,10 +109,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9E0B2FC220E603F500F67E7D /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				9E0B2FC320E603F500F67E7D /* AppDelegate.swift */,
+				9E0B2FC520E603F500F67E7D /* ViewController.swift */,
+				9E0B2FC720E603F500F67E7D /* Main.storyboard */,
+				9E0B2FCA20E603F500F67E7D /* Assets.xcassets */,
+				9E0B2FCC20E603F500F67E7D /* LaunchScreen.storyboard */,
+				9E0B2FCF20E603F500F67E7D /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		9E26E04C20E4C8F5006B7693 = {
 			isa = PBXGroup;
 			children = (
 				9E26E06120E4C918006B7693 /* Sources */,
+				9E0B2FC220E603F500F67E7D /* Example */,
 				9E26E05720E4C8F5006B7693 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				9E26E05620E4C8F5006B7693 /* TLCommon.framework */,
+				9E0B2FC120E603F500F67E7D /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +184,8 @@
 		9E26E07320E4D521006B7693 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9E63B44920EB4AA00028F6FE /* DispatchQueueExtension.swift */,
+				9E63B44720EB4A870028F6FE /* UIBarButtonItemFixSpace.swift */,
 				9E26E07A20E4D879006B7693 /* UIViewExtension.swift */,
 				9E26E07820E4D831006B7693 /* UIColorExtension.swift */,
 				9E26E07420E4D552006B7693 /* IDValidation.swift */,
@@ -149,6 +216,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9E0B2FC020E603F500F67E7D /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E0B2FD220E603F500F67E7D /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				9E0B2FBD20E603F500F67E7D /* Sources */,
+				9E0B2FBE20E603F500F67E7D /* Frameworks */,
+				9E0B2FBF20E603F500F67E7D /* Resources */,
+				9E0B2FD720E6042300F67E7D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E0B2FD620E6042300F67E7D /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 9E0B2FC120E603F500F67E7D /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		9E26E05520E4C8F5006B7693 /* TLCommon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E26E05E20E4C8F5006B7693 /* Build configuration list for PBXNativeTarget "TLCommon" */;
@@ -173,9 +259,13 @@
 		9E26E04D20E4C8F5006B7693 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Charles;
 				TargetAttributes = {
+					9E0B2FC020E603F500F67E7D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					9E26E05520E4C8F5006B7693 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
@@ -188,6 +278,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9E26E04C20E4C8F5006B7693;
 			productRefGroup = 9E26E05720E4C8F5006B7693 /* Products */;
@@ -195,11 +286,22 @@
 			projectRoot = "";
 			targets = (
 				9E26E05520E4C8F5006B7693 /* TLCommon */,
+				9E0B2FC020E603F500F67E7D /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9E0B2FBF20E603F500F67E7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0B2FCE20E603F500F67E7D /* LaunchScreen.storyboard in Resources */,
+				9E0B2FCB20E603F500F67E7D /* Assets.xcassets in Resources */,
+				9E0B2FC920E603F500F67E7D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9E26E05420E4C8F5006B7693 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,12 +312,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9E0B2FBD20E603F500F67E7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0B2FC620E603F500F67E7D /* ViewController.swift in Sources */,
+				9E0B2FC420E603F500F67E7D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9E26E05120E4C8F5006B7693 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9E26E07B20E4D879006B7693 /* UIViewExtension.swift in Sources */,
 				9E26E07020E4CE11006B7693 /* LogUtils.swift in Sources */,
+				9E63B44A20EB4AA00028F6FE /* DispatchQueueExtension.swift in Sources */,
 				9E26E06720E4CC32006B7693 /* BaseNavigationController.swift in Sources */,
 				9E26E06820E4CC32006B7693 /* BaseViewController.swift in Sources */,
 				9E26E07D20E4D8E0006B7693 /* UIImageExtension.swift in Sources */,
@@ -227,12 +339,76 @@
 				9E26E07120E4CE11006B7693 /* SandBoxUtils.swift in Sources */,
 				9E26E08020E4DBF6006B7693 /* TableEmptyable.swift in Sources */,
 				9E26E07220E4CE11006B7693 /* Utils.swift in Sources */,
+				9E63B44820EB4A870028F6FE /* UIBarButtonItemFixSpace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9E0B2FD620E6042300F67E7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E26E05520E4C8F5006B7693 /* TLCommon */;
+			targetProxy = 9E0B2FD520E6042300F67E7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9E0B2FC720E603F500F67E7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E0B2FC820E603F500F67E7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9E0B2FCC20E603F500F67E7D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E0B2FCD20E603F500F67E7D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		9E0B2FD020E603F500F67E7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.txws.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E0B2FD120E603F500F67E7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.txws.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9E26E05C20E4C8F5006B7693 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +583,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9E0B2FD220E603F500F67E7D /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E0B2FD020E603F500F67E7D /* Debug */,
+				9E0B2FD120E603F500F67E7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9E26E05020E4C8F5006B7693 /* Build configuration list for PBXProject "TLCommon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
