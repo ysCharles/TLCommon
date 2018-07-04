@@ -188,4 +188,40 @@ extension UIColor {
             return UIColor(patternImage: backgroundColorImage)
         }
     }
+    
+    
+    ///  水平线性渐变
+    ///
+    /// - Parameters:
+    ///   - size: 渐变大小
+    ///   - colors: 渐变色
+    ///   - locations: 渐变位置
+    /// - Returns: UIColor
+    static func lineGradient(size: CGSize, colors: [UIColor], locations: [CGFloat]) -> UIColor? {
+        // Turn the colors into CGColors
+        let cgcolors = colors.map { $0.cgColor }
+        
+        // Begin the graphics context
+        UIGraphicsBeginImageContextWithOptions(size, true, 0.0)
+        
+        // If no context was retrieved, then it failed
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        
+        // From now on, the context gets ended if any return happens
+        defer { UIGraphicsEndImageContext() }
+        
+        // Create the Coregraphics gradient
+        var locations = locations
+        guard let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: cgcolors as NSArray as CFArray, locations: &locations) else { return nil }
+        
+        // Draw the gradient
+        context.drawLinearGradient(gradient, start: CGPoint(x: 0.0, y: size.height), end: CGPoint(x: size.width, y: 0.0), options: [])
+        
+        // Generate the image (the defer takes care of closing the context)
+        guard let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+        
+        return UIColor(patternImage: backgroundColorImage)
+    }
 }
