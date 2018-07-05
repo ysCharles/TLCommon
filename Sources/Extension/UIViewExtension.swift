@@ -93,4 +93,16 @@ public extension UIView {
             center = tempCenter
         }
     }
+    
+    public var right : CGFloat {
+        get {
+            return self.x + self.width
+        }
+    }
+    
+    public var bottom : CGFloat {
+        get {
+            return self.y + self.height
+        }
+    }
 }
