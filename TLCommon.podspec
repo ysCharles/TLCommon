@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TLCommon"
-  s.version      = "0.8"
+  s.version      = "0.9"
   s.summary      = "Common组件，包含常用方法，常用 Extension，常量等"
 
   s.homepage     = "https://github.com/ysCharles/TLCommon"
