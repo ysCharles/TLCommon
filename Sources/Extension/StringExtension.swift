@@ -31,7 +31,7 @@ extension String {
     /// md5加密
     ///
     /// - Returns: 加密后数据
-    func md5() -> String {
+    public func md5() -> String {
         let context = UnsafeMutablePointer<CC_MD5_CTX>.allocate(capacity: 1)
         var digest = Array<UInt8>.init(repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
         CC_MD5_Init(context)
@@ -43,5 +43,23 @@ extension String {
         return digest.map({ (byte) -> String in
             return String(format: "%02x", byte)
         }).joined()
+    }
+    
+    /// sha1加密
+    ///
+    /// - Returns: 加密后数据
+    public func sha1() -> String {
+        let context = UnsafeMutablePointer<CC_SHA1_CTX>.allocate(capacity: 1)
+        var digest = Array<UInt8>.init(repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
+        CC_SHA1_Init(context)
+        
+        CC_SHA1_Update(context, self, CC_LONG(self.lengthOfBytes(using: .utf8)))
+        CC_SHA1_Final(&digest, context)
+        context.deallocate()
+        
+        return digest.map({ (byte) -> String in
+            return String(format: "%02x", byte)
+        }).joined()
+        
     }
 }
