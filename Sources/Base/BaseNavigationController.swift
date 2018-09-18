@@ -21,11 +21,11 @@ open class BaseNavigationController: UINavigationController {
         super.didReceiveMemoryWarning()
     }
     
-    open override var childViewControllerForStatusBarStyle: UIViewController? {
+    open override var childForStatusBarStyle: UIViewController? {
         return topViewController
     }
     
-    open override var childViewControllerForStatusBarHidden: UIViewController? {
+    open override var childForStatusBarHidden: UIViewController? {
         return topViewController
     }
     
@@ -33,6 +33,6 @@ open class BaseNavigationController: UINavigationController {
 // MARK: 解决修改 leftBarButtonItem后系统自带的侧滑返回功能消失的问题
 extension BaseNavigationController: UIGestureRecognizerDelegate {
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return self.childViewControllers.count > 1
+        return self.children.count > 1
     }
 }

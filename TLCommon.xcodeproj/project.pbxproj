@@ -6,20 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		9E6E8E3D214B5DC100664C7F /* CommonCryptoModuleMap */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9E6E8E40214B5DC100664C7F /* Build configuration list for PBXAggregateTarget "CommonCryptoModuleMap" */;
-			buildPhases = (
-				9E6E8E41214B5DD000664C7F /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = CommonCryptoModuleMap;
-			productName = CommonCryptoModuleMap;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		9E0B2FBC20E5D78300F67E7D /* TLTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B2FBB20E5D78300F67E7D /* TLTextView.swift */; };
 		9E0B2FC420E603F500F67E7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B2FC320E603F500F67E7D /* AppDelegate.swift */; };
@@ -52,13 +38,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9E26E05520E4C8F5006B7693;
 			remoteInfo = TLCommon;
-		};
-		9E6E8E42214B5DF900664C7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E26E04D20E4C8F5006B7693 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E6E8E3D214B5DC100664C7F;
-			remoteInfo = CommonCryptoModuleMap;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -268,7 +247,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9E6E8E43214B5DF900664C7F /* PBXTargetDependency */,
 			);
 			name = TLCommon;
 			productName = TLCommon;
@@ -292,9 +270,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
-					9E6E8E3D214B5DC100664C7F = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 				};
 			};
 			buildConfigurationList = 9E26E05020E4C8F5006B7693 /* Build configuration list for PBXProject "TLCommon" */;
@@ -312,7 +287,6 @@
 			targets = (
 				9E26E05520E4C8F5006B7693 /* TLCommon */,
 				9E0B2FC020E603F500F67E7D /* Example */,
-				9E6E8E3D214B5DC100664C7F /* CommonCryptoModuleMap */,
 			);
 		};
 /* End PBXProject section */
@@ -336,22 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9E6E8E41214B5DD000664C7F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This if-statement means we'll only run the main script if the CommonCryptoModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where CommonCrypto is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E0B2FBD20E603F500F67E7D /* Sources */ = {
@@ -393,11 +351,6 @@
 			target = 9E26E05520E4C8F5006B7693 /* TLCommon */;
 			targetProxy = 9E0B2FD520E6042300F67E7D /* PBXContainerItemProxy */;
 		};
-		9E6E8E43214B5DF900664C7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9E6E8E3D214B5DC100664C7F /* CommonCryptoModuleMap */;
-			targetProxy = 9E6E8E42214B5DF900664C7F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -433,7 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.txws.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -451,7 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.txws.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -602,7 +555,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -632,24 +585,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.txws.TLCommon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		9E6E8E3E214B5DC100664C7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9E6E8E3F214B5DC100664C7F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -679,15 +616,6 @@
 			buildConfigurations = (
 				9E26E05F20E4C8F5006B7693 /* Debug */,
 				9E26E06020E4C8F5006B7693 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9E6E8E40214B5DC100664C7F /* Build configuration list for PBXAggregateTarget "CommonCryptoModuleMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9E6E8E3E214B5DC100664C7F /* Debug */,
-				9E6E8E3F214B5DC100664C7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

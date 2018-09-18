@@ -14,7 +14,8 @@ extension UIImage {
     /// - Parameter size: 尺寸
     /// - Returns: UIImage
     public func resize(_ size: CGSize) -> UIImage? {
-        guard let data = UIImagePNGRepresentation(self) else { return nil }
+        guard let data = self.pngData() else { return nil}
+//        guard let data = UIImagePNGRepresentation(self) else { return nil }
         
         let maxPixelSize = max(size.width, size.height)
         

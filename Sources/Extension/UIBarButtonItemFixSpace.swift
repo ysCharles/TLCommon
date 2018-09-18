@@ -82,9 +82,9 @@ extension UINavigationController {
     }
     
     @available(iOS 11.0, *)
-    private var tempBehavor: UIScrollViewContentInsetAdjustmentBehavior {
+    private var tempBehavor: UIScrollView.ContentInsetAdjustmentBehavior {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.tempBehavor) as? UIScrollViewContentInsetAdjustmentBehavior ?? .automatic
+            return objc_getAssociatedObject(self, &AssociatedKeys.tempBehavor) as? UIScrollView.ContentInsetAdjustmentBehavior ?? .automatic
         }
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.tempBehavor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -144,7 +144,7 @@ extension UINavigationBar {
             let space = sx_defultFixSpace
             for view in subviews {
                 if NSStringFromClass(view.classForCoder).contains("ContentView") {
-                    view.layoutMargins = UIEdgeInsetsMake(0, space, 0, space)
+                    view.layoutMargins = UIEdgeInsets(top: 0, left: space, bottom: 0, right: space)
                 }
             }
         }

@@ -53,7 +53,7 @@ extension TLTextView {
         placeholderLabel.textColor = UIColor.lightGray //默认占位文字颜色
         font = UIFont.systemFont(ofSize: 16) //默认字体
         
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: self)
     }
     
     public override func layoutSubviews() {
