@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         
         
         view.addSubview(textView)
+        print("有没有home indicator: \(UIDevice.haveHomeIndicator)")
     }
 
     override func didReceiveMemoryWarning() {

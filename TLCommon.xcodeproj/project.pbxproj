@@ -27,6 +27,7 @@
 		9E26E07B20E4D879006B7693 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07A20E4D879006B7693 /* UIViewExtension.swift */; };
 		9E26E07D20E4D8E0006B7693 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */; };
 		9E26E08020E4DBF6006B7693 /* TableEmptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */; };
+		9E4884F22151693B00B30B0F /* UIDevice+HomeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4884F12151693B00B30B0F /* UIDevice+HomeIndicator.swift */; };
 		9E63B44820EB4A870028F6FE /* UIBarButtonItemFixSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E63B44720EB4A870028F6FE /* UIBarButtonItemFixSpace.swift */; };
 		9E63B44A20EB4AA00028F6FE /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E63B44920EB4AA00028F6FE /* DispatchQueueExtension.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		9E26E07A20E4D879006B7693 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		9E26E07F20E4DBF6006B7693 /* TableEmptyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableEmptyable.swift; sourceTree = "<group>"; };
+		9E4884F12151693B00B30B0F /* UIDevice+HomeIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+HomeIndicator.swift"; sourceTree = "<group>"; };
 		9E63B44720EB4A870028F6FE /* UIBarButtonItemFixSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemFixSpace.swift; sourceTree = "<group>"; };
 		9E63B44920EB4AA00028F6FE /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				9E26E07420E4D552006B7693 /* IDValidation.swift */,
 				9E26E07620E4D6D5006B7693 /* StringExtension.swift */,
 				9E26E07C20E4D8E0006B7693 /* UIImageExtension.swift */,
+				9E4884F12151693B00B30B0F /* UIDevice+HomeIndicator.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				9E26E06720E4CC32006B7693 /* BaseNavigationController.swift in Sources */,
 				9E26E06820E4CC32006B7693 /* BaseViewController.swift in Sources */,
 				9E26E07D20E4D8E0006B7693 /* UIImageExtension.swift in Sources */,
+				9E4884F22151693B00B30B0F /* UIDevice+HomeIndicator.swift in Sources */,
 				9E26E07520E4D552006B7693 /* IDValidation.swift in Sources */,
 				9E0B2FBC20E5D78300F67E7D /* TLTextView.swift in Sources */,
 				9E26E07720E4D6D5006B7693 /* StringExtension.swift in Sources */,
