@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ysCharles/TLCommon/master/LICENSE)
 [![Pods Versions](https://img.shields.io/cocoapods/v/TLCommon.svg?style=flat)](http://cocoapods.org/pods/TLCommon)
-[![CI Status](http://img.shields.io/travis/ysCharles/TLCommon.svg?style=flat)](https://travis-ci.org/ysCharles/TLCommon)
+[![Build Status](https://travis-ci.org/ysCharles/TLCommon.svg?branch=master)](https://travis-ci.org/ysCharles/TLCommon)
 [![Swift Version Compatibility](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat-square)](https://developer.apple.com/swift)
 [![swiftyness](https://img.shields.io/badge/pure-swift-ff3f26.svg?style=flat)](https://swift.org/)
 [![Swift Version](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://swift.org)
