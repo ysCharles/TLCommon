@@ -1,4 +1,5 @@
 language: Swift
 osx_image: xcode10
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+xcode_project: TLCommon.xcodeproj
+script: xcodebuild -project TLCommon.xcodeproj -scheme "TLCommon" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=latest'
 
