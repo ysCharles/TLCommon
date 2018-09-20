@@ -1,1 +1,3 @@
 language: Swift
+osx_image: xcode10
+
