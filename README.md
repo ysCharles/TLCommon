@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/ysCharles/TLCommon.svg?branch=master)](https://travis-ci.org/ysCharles/TLCommon)
 [![Swift Version Compatibility](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat-square)](https://developer.apple.com/swift)
 [![swiftyness](https://img.shields.io/badge/pure-swift-ff3f26.svg?style=flat)](https://swift.org/)
-[![Swift Version](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://swift.org)
+[![Swift Version](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org)
 [![GitHub stars](https://img.shields.io/github/stars/ysCharles/TLCommon.svg)](https://github.com/ysCharles/TLCommon/stargazers)
 
 
@@ -76,8 +76,6 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
     proLog("Hello World")
     ```
 
-    
-
   * SandBoxUtils 
 
     ```swift
@@ -107,8 +105,6 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
         public static func getCachesPath() -> String
     
     ```
-
-    
 
   * Utils
 
@@ -204,8 +200,6 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
         public static func getVersion(type: Int = 0) -> String 
     ```
 
-    
-
 * Extension
 
   * String
@@ -235,8 +229,6 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
     }
     
     ```
-
-    
 
   * UIView
 
@@ -329,8 +321,6 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
     }
     ```
 
-    
-
 * Custom View
 
   ```swift
@@ -352,13 +342,6 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
   }
   ```
 
-  
-
-  
-
-  
-
-  
 
 ## License
 
