@@ -11,19 +11,24 @@ import UIKit
 extension UIDevice {
     public static var haveHomeIndicator : Bool {
         get {
-            if #available(iOS 11.0, *) {
-                if let win = UIApplication.shared.delegate?.window, let insets = win?.safeAreaInsets {
-                    if insets.bottom == 34 {
-                        return true
-                    } else {
-                        return false
-                    }
-                } else {
-                    return false
-                }
-            } else {  // iOS 11以下 不可能有 iPhone X
-                return false
-            }
+            return isIphoneX || isIphoneXS || isIphoneXR || isIphoneXSMax
         }
+    }
+    
+    
+    public static var isIphoneX : Bool {
+        return UIScreen.main.bounds.size == CGSize(width: 375, height: 812)
+    }
+    
+    public static var isIphoneXS : Bool {
+        return UIScreen.main.bounds.size == CGSize(width: 375, height: 812)
+    }
+    
+    public static var isIphoneXR : Bool {
+        return UIScreen.main.bounds.size == CGSize(width: 414, height: 896)
+    }
+    
+    public static var isIphoneXSMax : Bool {
+        return UIScreen.main.bounds.size == CGSize(width: 414, height: 896)
     }
 }

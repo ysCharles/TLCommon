@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         
         view.addSubview(textView)
         print("有没有home indicator: \(UIDevice.haveHomeIndicator)")
+        
+        print(UIScreen.main.bounds.size)
+        print("isIphoneX:\(UIDevice.isIphoneX)")
+        print("isIphoneXR:\(UIDevice.isIphoneXR)")
+        
     }
 
     override func didReceiveMemoryWarning() {
