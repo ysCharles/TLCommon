@@ -4,7 +4,7 @@
 [![Pods Versions](https://img.shields.io/cocoapods/v/TLCommon.svg?style=flat)](http://cocoapods.org/pods/TLCommon)
 [![Platform](https://img.shields.io/cocoapods/p/TLCommon.svg?style=flat)](https://github.com/ysCharles/TLCommon)
 [![Build Status](https://travis-ci.org/ysCharles/TLCommon.svg?branch=master)](https://travis-ci.org/ysCharles/TLCommon)
-[![Swift Version Compatibility](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat-square)](https://developer.apple.com/swift)
+[![Swift Version Compatibility](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
 [![swiftyness](https://img.shields.io/badge/pure-swift-ff3f26.svg?style=flat)](https://swift.org/)
 [![Swift Version](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org)
 [![GitHub stars](https://img.shields.io/github/stars/ysCharles/TLCommon.svg)](https://github.com/ysCharles/TLCommon/stargazers)
