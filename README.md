@@ -49,7 +49,6 @@ public let SCREEN_SCALE : CGFloat
 // 导航条高度
 public let NAV_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 88 : 64
 // 状态栏高度
-<<<<<<< HEAD
 public let STATUS_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 44 : 20
 // 是否是 iPhoneX
 public let isiPhoneX : Bool
