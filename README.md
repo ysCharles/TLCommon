@@ -45,9 +45,9 @@ public let SCREEN_HEIGHT : CGFloat
 // 屏幕比例
 public let SCREEN_SCALE : CGFloat
 // 导航条高度
-public let NAV_BAR_HEIGHT: CGFloat = SCREEN_HEIGHT == 812 ? 88 : 64
+public let NAV_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 88 : 64
 // 状态栏高度
-public let STATUS_BAR_HEIGHT: CGFloat = SCREEN_HEIGHT == 812 ? 44 : 20
+public let STATUS_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 44 : 20
 // 是否是 iPhoneX
 public let isiPhoneX : Bool
 
@@ -214,6 +214,16 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
         
         /// 是否是邮件
         public var isEmail: Bool 
+        
+        /// md5加密
+        ///
+        /// - Returns: 加密后数据
+        public func md5() -> String
+        
+        /// sha1加密
+        ///
+        /// - Returns: 加密后数据
+        public func sha1() -> String
     }
     ```
 
@@ -320,6 +330,22 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
         }
     }
     ```
+
+  * UIDevice
+
+    ```swift
+    extension UIDevice {
+        /// 判断是否有 HomeIndicator
+        public static var haveHomeIndicator: Bool {get}
+        public static var isIphoneX : Bool {get}
+        public static var isIphoneXS : Bool {get}
+        public static var isIphoneXR : Bool {get}
+        public static var isIphoneXSMax : Bool {get}
+    }
+    ```
+
+
+
 
 * Custom View
 
