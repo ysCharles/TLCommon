@@ -143,19 +143,23 @@ public struct Utils {
     /// - Returns: 打开是否成功
     @discardableResult
     public static  func callPhone(number: String) -> Bool {
-        let telUrl = "tel:" + number
-        if let url = URL(string: telUrl) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-            return true
-        } else {
+        
+        guard let telUrl = String(format: "tel:%@", number).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed),
+            let url = URL(string: telUrl) else {
+                return false
+        }
+        
+        if !UIApplication.shared.canOpenURL(url) {
             return false
         }
         
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
         
+        return true
     }
     
     /// 打开浏览器 真机调试
