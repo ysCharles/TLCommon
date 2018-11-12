@@ -374,3 +374,4 @@ public let RGB: (_ red: Int,_ green: Int, _ blue: Int) -> UIColor
 ## License
 
 `TLCommon` is available under the MIT license. See the `LICENSE` file for more info.
+
