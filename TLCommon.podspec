@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TLCommon"
-  s.version      = "1.4"
+  s.version      = "1.5"
   s.summary      = "Common组件，包含常用方法，常用 Extension，常量等"
 
   s.homepage     = "https://github.com/ysCharles/TLCommon"
@@ -27,5 +27,5 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources/**/*.swift"
 
   s.frameworks = "UIKit", "StoreKit"
-  s.swift_version = '4.2'
+  s.swift_version = '5'
 end
