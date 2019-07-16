@@ -82,7 +82,7 @@ extension UIColor {
     }
 }
 
-enum UIGradientStyle {
+public enum UIGradientStyle {
     case left2Right
     case radial //雷达
     case top2Bottom
@@ -90,7 +90,7 @@ enum UIGradientStyle {
 }
 
 extension UIColor {
-    static func gradient(style: UIGradientStyle = .left2Right, frame: CGRect, colors: [UIColor]) -> UIColor? {
+    static public func gradient(style: UIGradientStyle = .left2Right, frame: CGRect, colors: [UIColor]) -> UIColor? {
         let backgroundGradientLayer = CAGradientLayer()
         backgroundGradientLayer.frame = frame
         
