@@ -13,6 +13,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let leftBtn = UIButton(type: .custom)
+        leftBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        leftBtn.setTitleColor(.black, for: .normal)
+        leftBtn.setTitle("提交", for: .normal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
+        
         let textView = TLTextView(frame: CGRect(x: 0, y: 100, width: 375, height: 100))
         
         textView.font = UIFont.systemFont(ofSize: 24)
