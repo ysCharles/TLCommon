@@ -2,12 +2,11 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ysCharles/TLCommon/master/LICENSE)
 [![Pods Versions](https://img.shields.io/cocoapods/v/TLCommon.svg?style=flat)](http://cocoapods.org/pods/TLCommon)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/TLCommon.svg?style=flat)](https://github.com/ysCharles/TLCommon)
 [![Build Status](https://travis-ci.org/ysCharles/TLCommon.svg?branch=master)](https://travis-ci.org/ysCharles/TLCommon)
-[![Swift Version Compatibility](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version Compatibility](https://img.shields.io/badge/swift5-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
 [![swiftyness](https://img.shields.io/badge/pure-swift-ff3f26.svg?style=flat)](https://swift.org/)
-[![Swift Version](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org)
+[![Swift Version](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://swift.org)
 [![GitHub stars](https://img.shields.io/github/stars/ysCharles/TLCommon.svg)](https://github.com/ysCharles/TLCommon/stargazers)
 
 
@@ -28,10 +27,12 @@
 pod 'TLCommon'
 ```
 
-### Carthage
+### Swift Package Manager
 
 ```ruby
-github "ysCharles/TLCommon"
+dependencies: [
+    .package(url: "https://github.com/ysCharles/TLCommon.git", .upToNextMajor(from: "1.7.5"))
+]
 ```
 
 ## Usage
@@ -50,8 +51,6 @@ public let SCREEN_SCALE : CGFloat
 public let NAV_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 88 : 64
 // 状态栏高度
 public let STATUS_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 44 : 20
-// 是否是 iPhoneX
-public let isiPhoneX : Bool
 
 /// RGBA 颜色简便获取方法
 public let RGBA: (_ red: Int,_ green: Int, _ blue: Int, _ aplpa: CGFloat) -> UIColor
