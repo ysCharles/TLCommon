@@ -12,10 +12,12 @@ import UIKit
 public let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 public let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 public let SCREEN_SCALE = UIScreen.main.scale
-public let NAV_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 88 : 64
-public let STATUS_BAR_HEIGHT: CGFloat = UIDevice.haveHomeIndicator ? 44 : 20
 
-public let isiPhoneX = UIDevice.isIphoneX
+public let STATUS_BAR_HEIGHT: CGFloat = UIDevice.statusBarHeight
+
+public let NAV_BAR_HEIGHT: CGFloat = STATUS_BAR_HEIGHT + 44
+
+
 
 /// RGBA 颜色简便获取方法
 public let RGBA: (_ red: Int,_ green: Int, _ blue: Int, _ aplpa: CGFloat) -> UIColor = {(red: Int,green: Int, blue: Int, aplpa: CGFloat) -> UIColor in

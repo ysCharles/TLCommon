@@ -1,9 +1,8 @@
 //
 //  ViewController.swift
-//  Example
+//  Demo
 //
-//  Created by Charles on 2018/6/29.
-//  Copyright © 2018 Charles. All rights reserved.
+//  Created by Charles on 2021/11/11.
 //
 
 import UIKit
@@ -13,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let leftBtn = UIButton(type: .custom)
         leftBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
@@ -33,14 +33,9 @@ class ViewController: UIViewController {
         print("有没有home indicator: \(UIDevice.haveHomeIndicator)")
         
         print(UIScreen.main.bounds.size)
-        print("isIphoneX:\(UIDevice.isIphoneX)")
-        print("isIphoneXR:\(UIDevice.isIphoneXR)")
-        
-    }
+        print("状态栏高度:\(STATUS_BAR_HEIGHT)")
+        print("导航栏高度:\(NAV_BAR_HEIGHT)")
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

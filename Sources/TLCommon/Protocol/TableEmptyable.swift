@@ -8,25 +8,10 @@
 
 import UIKit
 
-public protocol TableEmptyViewDelegate : class {
+public protocol TableEmptyViewDelegate : AnyObject {
     /// 提供占位view,该view将占据tableView的tableFooterView
     var placeHolderView: UIView {get}
 }
-
-// MARK: - 扩展默认实现
-//extension TableEmptyViewDelegate where Self: BaseTableViewController {
-//
-//    public var placeHolderView: UIView {
-//        get {
-//            let imgView = UIImageView(frame: CGRect(x: 0, y: 64, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-64))
-//
-//            imgView.image = UIImage(named: "00xx")
-//
-//            imgView.backgroundColor = UIColor.blue
-//            return imgView
-//        }
-//    }
-//}
 
 extension UITableView {
     
